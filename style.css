@@ -1,0 +1,616 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+    --color-primary: #ef8d21;
+    --white: #ffffff;
+    --black: #364547;
+
+    --poppins: "Poppins", sans-serif;
+    --nunito: "Nunito", sans-serif;
+}
+
+html {
+    overflow-x: hidden;
+    scroll-padding-top: 200px;
+    scroll-behavior: smooth;
+}
+
+* {
+    transition: 300ms;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 2000px;
+}
+
+.navigation {
+    z-index: 7;
+    box-shadow: 0 2px 4px 0 rgb(211, 205, 205);
+    position: fixed;
+    font-family: var(--nunito);
+    background-color: white;
+    top: 0;
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigation .container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navigation .container .list {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.navigation .container .list a {
+    color: var(--black);
+    font-size: 24px;
+    text-decoration: none;
+    transition: 300ms;
+    margin: 0 40px;
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    opacity: 0.6;
+}
+
+.navigation .container .list a:before {
+    display: flex;
+    justify-content: center;
+    content: "";
+    transition: 300ms;
+    bottom: -5px;
+    position: absolute;
+    width: 0px;
+    height: 2px;
+    background-color: var(--color-primary);
+}
+
+.navigation .container .list a:hover:before {
+    width: 45px;
+    opacity: 1;
+}
+
+.navigation .container .list a:hover {
+    opacity: 1;
+}
+
+.navigation .container .buttonLogin {
+    cursor: pointer;
+    transition: 300ms;
+    padding: 15px 50px;
+    font-size: 18px;
+    background-color: ;
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    border-radius: 100px;
+    background-color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+}
+
+.navigation .container .buttonLogin:hover {
+    background-color: var(--white);
+    color: var(--black);
+    border: 2px solid black;
+    box-shadow: 0px 5px 2px 0px #ef8d21;
+}
+
+.navigation .container .buttonLogin:active {
+    transform: translate(0, 3px);
+    box-shadow: 0px 3px 2px 0px #e2841f;
+}
+
+.login-section {
+    transition: 400ms;
+    height: 150px;
+    width: 100%;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.login-section .container input {
+    outline: 0;
+    background: #f2f2f2;
+    border-radius: 4px;
+    border: 0;
+    margin: 15px 0;
+    padding: 15px;
+    font-size: 14px;
+}
+
+.login-section .container input:focus {
+    box-shadow: 0 0 5px 0 rgba(106, 98, 210);
+}
+
+.login-section .container button {
+    cursor: pointer;
+    transition: 300ms;
+    width: 80%;
+    height: 50px;
+    font-weight: 900;
+    font-family: var(--nunito);
+    border-radius: 100px;
+    background-color: var(--white);
+    color: var(--black);
+    border: 2px solid black;
+    box-shadow: 0px 5px 2px 0px #c77116;
+}
+
+.login-section .container button:hover {
+    cursor: pointer;
+    transition: 300ms;
+    background-color: ;
+    text-decoration: none;
+    color: white;
+    font-weight: 900;
+    border-radius: 100px;
+    background-color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+}
+
+.drop-in {
+    height: 600px;
+    transform: translate(0, 300px);
+    opacity: 1;
+    display: flex;
+}
+
+.hero-section {
+    font-family: var(--poppins);
+    margin-top: 150px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-section .container {
+    width: 667px;
+}
+
+.hero-section .container h2 {
+    font-size: 49px;
+    font-weight: 400;
+    color: var(--black);
+}
+
+.hero-section .container h1 {
+    font-size: 70px;
+    font-weight: 800;
+    color: var(--black);
+}
+
+.hero-section .container h1 b {
+    color: var(--color-primary);
+}
+
+.hero-section .container p {
+    font-weight: 300;
+    line-height: 25px;
+    letter-spacing: 3%;
+}
+
+.hero-section .container .scooter-rent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 667px;
+    height: 75px;
+    border-radius: 100px;
+    box-shadow: 0 2px 3px 0 rgb(116, 113, 113);
+    margin-top: 30px;
+}
+
+.hero-section .container .scooter-rent .options {
+    display: flex;
+    align-items: center;
+    margin-right: -40px;
+    position: relative;
+}
+
+.hero-section .container .scooter-rent .options:before {
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    height: 33px;
+    width: 2px;
+    left: 145px;
+    opacity: 0.4;
+    border-radius: 100px;
+    background-color: var(--black);
+}
+
+.hero-section .container .scooter-rent .options:after {
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    height: 33px;
+    width: 2px;
+    left: 300px;
+    opacity: 0.4;
+    border-radius: 100px;
+    background-color: var(--black);
+}
+
+.hero-section .container .scooter-rent .options a {
+    text-align: center;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--black);
+    opacity: 0.7;
+    margin: 0 25px;
+    position: relative;
+}
+
+.hero-section .container .scooter-rent .options a:first-child {
+    display: flex;
+    align-items: center;
+    transition: 300ms;
+    display: block;
+    opacity: 0.7;
+}
+
+.hero-section .container .scooter-rent .options a:nth-child(2) {
+    transition: 300ms;
+    display: block;
+    opacity: 0.7;
+    position: relative;
+}
+
+select {
+    cursor: pointer;
+    margin: 0 25px;
+    border: 2px solid rgba(54, 69, 71, 0.18);
+    font-size: 16px;
+    opacity: 0;
+    transform: translate(0, -30px);
+    transition: 300ms;
+    display: none;
+    font-family: var(--poppins);
+    width: 100px;
+}
+
+.select-animation {
+    animation-name: locationAnimation;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.datetimelocal {
+    cursor: pointer;
+    margin: 0 25px;
+    border: 2px solid rgba(54, 69, 71, 0.18);
+    font-size: 16px;
+    opacity: 0;
+    transform: translate(0, -30px);
+    transition: 300ms;
+    display: none;
+    font-family: var(--poppins);
+    width: 100px;
+    position: relative;
+}
+
+.rangeclass {
+    width: 100px;
+    display: none;
+    margin: 0 25px;
+    cursor: pointer;
+}
+
+.hero-section .container .scooter-rent button {
+    cursor: pointer;
+    transition: 300ms;
+    padding: 15px 25px;
+    font-weight: 900;
+    font-family: var(--nunito);
+    border-radius: 100px;
+    margin-left: 70px;
+    background-color: var(--white);
+    color: var(--black);
+    border: 2px solid black;
+    box-shadow: 0px 5px 2px 0px #c77116;
+}
+
+.hero-section .container .scooter-rent button:hover {
+    cursor: pointer;
+    padding: 15px 25px;
+    transition: 300ms;
+    background-color: ;
+    text-decoration: none;
+    color: white;
+    font-weight: 900;
+    border-radius: 100px;
+    background-color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+}
+
+.hero-section .container .scooter-rent button:active {
+    transform: translate(0, 2px);
+    box-shadow: 0px 2px 2px 0px #c77116;
+}
+
+.scooter-image {
+    position: absolute;
+    z-index: 5;
+    top: -300px;
+    left: -100px;
+    width: 200px;
+    transition: 1.8s;
+}
+
+.animate {
+    transform: translateX(1700px);
+}
+
+.services-section {
+    margin-top: 400px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.services-section:before {
+    content: "";
+    position: absolute;
+    top: -250px;
+    height: 200px;
+    width: 100%;
+    background-image: url(images/straight-road-travel-concept-illustration.png);
+    background-size: contain;
+}
+
+.services-section .container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 50%;
+}
+
+.services-section .container h2 {
+    font-size: 46px;
+    font-family: var(--poppins);
+    color: var(--black);
+}
+
+.services-section .container .services-articles {
+    gap: 20px;
+    margin-top: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.services-section .container .services-articles article {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 250px;
+    border: 2px solid rgba(54, 69, 71, 0.18);
+    border-radius: 5px;
+}
+
+.services-section .container .services-articles article h3 {
+    font-size: 26px;
+    font-family: var(--poppins);
+    margin-top: 20px;
+    color: black;
+}
+
+.services-section .container .services-articles article p {
+    margin-top: 65px;
+    font-family: var(--nunito);
+    color: var(--black);
+    width: 300px;
+    text-align: center;
+}
+
+.services-section .container .services-articles article button {
+    font-size: 16px;
+    padding: 10px 20px;
+    margin-top: 15px;
+    background-color: var(--color-primary);
+    border: 0;
+    color: white;
+    border-radius: 10px;
+    font-family: var(--nunito);
+    font-weight: 600;
+    box-shadow: 0 6px var(--black);
+    cursor: pointer;
+}
+
+.services-section .container .services-articles article button:hover {
+    background-color: #d47c1e;
+}
+
+.services-section .container .services-articles article button:active {
+    box-shadow: 0 3px black;
+    transform: translate(0, 4px);
+}
+
+.services-section .container .services-articles article:first-child:hover,
+.services-section .container .services-articles article:nth-child(2):hover {
+    transform: translate(0, -20px);
+}
+
+.services-section .container .services-articles article:nth-child(3):hover,
+.services-section .container .services-articles article:nth-child(4):hover {
+    transform: translate(0, 20px);
+}
+
+.services-section .container .services-articles article:first-child:before {
+    content: "";
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    background-size: cover;
+    background-image: url(images/rent_1799367.png);
+    top: 65px;
+}
+
+.services-section .container .services-articles article:nth-child(2):before {
+    content: "";
+    position: absolute;
+    height: 45px;
+    width: 45px;
+    background-size: cover;
+    background-image: url(images/repair_939160.png);
+    top: 65px;
+}
+
+.services-section .container .services-articles article:nth-child(3):before {
+    content: "";
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    background-size: cover;
+    background-image: url(images/support_13653915.png);
+    top: 65px;
+}
+
+.services-section .container .services-articles article:last-child:before {
+    content: "";
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    background-size: cover;
+    background-image: url(images/sell_2747452.png);
+    top: 65px;
+}
+
+iframe {
+    height: 400px;
+    width: 500px;
+}
+
+.map {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 450px;
+    width: 550px;
+    border: 2px solid rgba(54, 69, 71, 0.18);
+}
+
+.contact-section {
+    display: flex;
+    justify-content: center;
+    margin-top: 200px;
+}
+
+.contact-section .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 100px;
+    margin-bottom: 100px;
+}
+
+.contact-section .row form {
+    width: 400px;
+    font-family: var(--nunito);
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-section .row form h2 {
+    font-size: 43px;
+    color: var(--black);
+    font-family: var(--poppins);
+}
+
+.contact-section .row form input {
+    margin: 10px 0;
+    border: 2px solid rgba(54, 69, 71, 0.18);
+    width: 370px;
+    height: 50px;
+    font-size: 16px;
+    padding-left: 15px;
+}
+
+.contact-section .row form textarea {
+    resize: none;
+    height: 100px;
+    margin: 5px 0;
+    font-family: var(--poppins);
+    font-size: 16px;
+    padding-left: 15px;
+    padding-top: 5px;
+    border: 2px solid rgba(54, 69, 71, 0.18);
+}
+
+.contact-section .row form .submitBtn {
+    font-size: 16px;
+    padding: 10px 20px;
+    background-color: var(--color-primary);
+    border: 0;
+    color: white;
+    border-radius: 10px;
+    font-family: var(--nunito);
+    font-weight: 600;
+    box-shadow: 0 6px var(--black);
+    cursor: pointer;
+}
+
+.contact-section .row form .submitBtn:hover {
+    background-color: #d47c1e;
+}
+
+.contact-section .row form .submitBtn:active {
+    box-shadow: 0 3px black;
+    transform: translate(0, 4px);
+}
+
+.scooter-rent .options a:nth-child(3):hover .range {
+    opacity: 1;
+    transition: 400ms;
+}
+
+.range {
+    opacity: 0;
+    position: absolute;
+    bottom: -50px;
+    left: -10px;
+    background-color: red;
+    width: 100px;
+    cursor: pointer;
+}
+
+@keyframes locationAnimation {
+    from {
+        transform: translate(0, -30px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translate(0);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 1066px) {
+    .contact-section .row {
+        display: flex;
+        justify-content: center;
+    }
+}

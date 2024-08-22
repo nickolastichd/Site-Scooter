@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <title>Scooter-Rent</title>
+    </head>
+    <body>
+        <!-- Login Section -->
+        <div id="loginSection" class="login-section">
+            <div class="container">
+                <h2>Login</h2>
+                <input type="text" placeholder="name" />
+                <input type="password" placeholder="password" />
+                <button id="loginSubmit">Submit</button>
+            </div>
+        </div>
+
+        <!-- Header -->
+        <header id="navSection" class="navigation">
+            <div class="container">
+                <img src="images/Group 1.png" alt="" />
+                <div class="list">
+                    <a href="#hero">Home</a>
+                    <a href="#services">Services</a>
+                    <a href="#contact">Contact Us</a>
+                </div>
+                <a href="#loginSection" class="buttonLogin" id="loginBtn"
+                    >Login</a
+                >
+            </div>
+        </header>
+
+        <!-- Hero -->
+        <section class="hero-section" id="hero">
+            <div class="container">
+                <h2>Fair price ride</h2>
+                <h1>Rent our <b>Scooter</b></h1>
+                <p>
+                    Lorem Ipsum has been the industry's standard dummy text ever
+                    since the 1500s, when an unknown printer took a galley of
+                    type and scrambled it to make a type specimen book.
+                </p>
+                <div class="scooter-rent">
+                    <div class="options">
+                        <a href="#" id="locationHref">Location</a>
+                        <select name="locations" id="locationDropdown">
+                            <option value="novibeograd">Novi Beograd</option>
+                            <option value="zemun">Zemun</option>
+                            <option value="konjarnik">Konjarnik</option>
+                            <option value="starigrad">Stari Grad</option>
+                        </select>
+                        <a href="#" id="timeHref">Pickup Date</a>
+                        <input
+                            type="datetime-local"
+                            id="time"
+                            class="datetimelocal"
+                        />
+                        <a href="#" id="rangeHref">Kilometers</a>
+                        <input
+                            type="range"
+                            id="range"
+                            class="rangeclass"
+                            value="0"
+                            min="0"
+                            max="1000"
+                            step="5"
+                        />
+                    </div>
+                    <button class="bookBtn" id="bookButton">
+                        Book Scooter
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services -->
+
+        <section class="services-section" id="services">
+            <img
+                src="images/—Pngtree—classic yellow scooter isolated on_16371467.png"
+                alt="Scooter"
+                class="scooter-image"
+                id="scooter"
+            />
+            <div class="container">
+                <h2>Our services</h2>
+                <div class="services-articles">
+                    <article>
+                        <h3>Scooter Rent</h3>
+                        <p>IF WILLING CONATCT US. ALL SERVICES AVAILABLE.</p>
+                        <button>Read More</button>
+                    </article>
+                    <article>
+                        <h3>Scooter Repair</h3>
+                        <p>IF WILLING CONATCT US. ALL SERVICES AVAILABLE.</p>
+                        <button>Read More</button>
+                    </article>
+                    <article>
+                        <h3>24/7 Support</h3>
+                        <p>IF WILLING CONATCT US. ALL SERVICES AVAILABLE.</p>
+                        <button>Read More</button>
+                    </article>
+                    <article>
+                        <h3>Scooter Selling</h3>
+                        <p>IF WILLING CONATCT US. ALL SERVICES AVAILABLE.</p>
+                        <button>Read More</button>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Us -->
+        <section class="contact-section" id="contact">
+            <div class="row">
+                <div class="map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2831.580276507726!2d20.410501276601543!3d44.7893615782108!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475a6f54a5e2046f%3A0x4370de97c5cae743!2sE-scooter%20rent!5e0!3m2!1sen!2srs!4v1724191808398!5m2!1sen!2srs"
+                        width="800"
+                        height="600"
+                        style="border: 0"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                    ></iframe>
+                </div>
+                <form>
+                    <h2>Contact Us</h2>
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Type your name"
+                        class="nameinput"
+                    />
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Type your e-mail"
+                    />
+                    <input
+                        type="text"
+                        id="subject"
+                        placeholder="Enter Subject"
+                    />
+                    <textarea
+                        placeholder="Enter your message"
+                        class="box"
+                        cols="42"
+                        id="message"
+                    ></textarea>
+                    <button type="submit" class="submitBtn">Submit</button>
+                </form>
+            </div>
+        </section>
+
+        <script src="app.js"></script>
+    </body>
+</html>
